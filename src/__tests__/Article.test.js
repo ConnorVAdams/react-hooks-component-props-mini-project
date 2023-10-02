@@ -22,6 +22,7 @@ test("renders a <h3> with the title of the post", () => {
     />
   );
   const h3 = screen.queryByText(/Components 101/);
+  screen.debug(h3)
   expect(h3).toBeInTheDocument();
   expect(h3.tagName).toBe("H3");
 });

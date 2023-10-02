@@ -11,6 +11,7 @@ test("renders a <aside> element", () => {
 test("renders a <img> with the blog logo and alt text of 'blog logo'", () => {
   render(<About image={logo} />);
   const img = screen.queryByAltText("blog logo");
+
   expect(img).toBeInTheDocument();
   expect(img.src).toContain(logo);
 });
